@@ -3,6 +3,9 @@
   </head>
   <body>
     <ul>
+      <?php
+echo 'good!'
+?>
       <li>Met</li>
       <li>Know</li>
       <li>Acquaint</li>
