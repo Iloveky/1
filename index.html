@@ -1,19 +1,20 @@
 <html>
 <head>
 
-     <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1.2, user-scalable=yes" />
+     <meta name="viewport" content="width=device-width, initial-scale=0.8, minimum-scale=0.5, maximum-scale=1.5, user-scalable=yes" />
      <style>
       a:link {color:#1E90FF;text-decoration:none;}
       a:visited {color:#1E90FF;}
       a:hover {color:#FF6347;}
       a:active {color:#7CFC00;}
-      #div1 {margin:0px;padding-left:10px;background:#E0FFFF;width:20%;height:100%;float:left;border-right:2px solid gray; }
-      #div2 {margin:0px;padding-left:20px;float:left;}
+      #div1 {margin:0px;padding:10px;background:#E0FFFF;width:30%;height:100%;border-right:2px solid gray; }
+      #div2 {margin:0px;padding-left:30px;position:absolute;top:0px;left:30%;}
       body {margin:0px;padding:0px;}
-
+      ul {padding-left:25px;}
+      li {padding-top:5px;}
     </style>
     <script>
-     window.onload=function(){
+     
      	var aContent=new Array();
      	aContent[0]="It was end of 2016 the first time we met, in an official way.";
      	aContent[1]="Day by day, we got to know each other, and became more and more familiar.";
@@ -32,7 +33,6 @@
      	aContent[14]="Then you said you hate me in your mind. I also deem that you were unreasonable at all.";
      	aContent[15]="Finally your heart was broken. But I don't even what to do. What the hell we mess up this meeting.";
      	aContent[16]="It is a pity that our story end up in this way. However, it is a new beginning. Let's cheer up.";
-
      	var aTitle=new Array();
      	aTitle[0]="We Met That Day";
      	aTitle[1]="Got To Know Each Other";
@@ -51,33 +51,44 @@
      	aTitle[14]="You Hate Me";
      	aTitle[15]="Your Heart Broken";
      	aTitle[16]="End Up The Story";
-
-
-     	  	
-     	var oUl1=document.getElementById('ul1');
-     	var oH1=document.getElementById('h1');
-			var oP2=document.getElementById('p2');
-     	var aArr1=ul1.getElementsByTagName('li');
-     	for (i=0;i<aArr1.length+1;i++)
-     	{
-     		aArr1[i].index=i;
-     		aArr1[i].onclick=function(){
-     	oH1.innerHTML=aTitle[this.index];
-    	oP2.innerHTML=aContent[this.index];
- 	
-     		}
-     	}
      	
-     
+			window.onload=function(){ 	
+				a();
+				b();     
+			}
+			function a(){
+				var oH1=document.getElementById('h1');
+				var oP1=document.getElementById('p1');
+				var oP2=document.getElementById('p2');
+				oP1.onclick=function(){
+					oH1.innerHTML="This Is Our Story";
+					oP2.innerHTML="Welome! You will read our story here.";
+					};
+			};
+			function b(){
+			var oUl1=document.getElementById('ul1');
+			var oH1=document.getElementById('h1');
+			var oP2=document.getElementById('p2');
+			var aArr1=ul1.getElementsByTagName('li');
+			for (i=0;i<aArr1.length+1;i++)
+				{
+				aArr1[i].index1=i;
+				aArr1[i].onclick=function(){
+					oH1.innerHTML=aTitle[this.index1];
+					oP2.innerHTML=aContent[this.index1];
+					}
+				}
+			};
 
-}
+
+
      </script>
 
 </head>
 <body>
-	
+
 	<div id="div1">
-		<p id="p1"><a href="index.html" >Home</a></p>
+		<p id="p1"><a href="javascript:" >Home</a></p>
 		<ul id="ul1">
       <li><a href="javascript:" >Met</a></li>
       <li><a href="javascript:" >Know</a></li>
