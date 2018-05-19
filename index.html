@@ -1,0 +1,111 @@
+<html>
+<head>
+
+     <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1.2, user-scalable=yes" />
+     <script>
+     window.onload=function(){
+     	var aContent=new Array();
+     	aContent[0]="It was end of 2016 the first time we met, in an official way.";
+     	aContent[1]="Day by day, we got to know each other, and became more and more familiar.";
+     	aContent[2]="Week by week, we acquainted more and more about each other, and start to notice each other.";
+     	aContent[3]="Some day, we feel like each other. You bougth me a small gift. And I start to take care of you.";
+     	aContent[4]="After lots of cooperation, we had better understanding with each other.";
+     	aContent[5]="We suddenly felt in love with each other.";
+     	aContent[6]="Things heated up. We could not help to stop for a thought.";
+     	aContent[7]="Time flied, we got cooling down. Start look at the people around us.";
+     	aContent[8]="And that day, we said goodbye to each other. We want to stop everything, but it was not what we want.";
+     	aContent[9]="One day later after the break, we get back together again, because we could leave each other.";
+     	aContent[10]="The days continued. However, again something happens, you got worries.";
+     	aContent[11]="Things got cooling down, there seems to be some distance between us.";
+     	aContent[12]="We arguesed, for any small case. You got a lot to angry. Oh my god.";
+     	aContent[13]="After many times, we got said either. Days become gray.";
+     	aContent[14]="Then you said you hate me in your mind. I also deem that you were unreasonable at all.";
+     	aContent[15]="Finally your heart was broken. But I don't even what to do. What the hell we mess up this meeting.";
+     	aContent[16]="It is a pity that our story end up in this way. However, it is a new beginning. Let's cheer up.";
+
+     	var aTitle=new Array();
+     	aTitle[0]="We Met That Day";
+     	aTitle[1]="Got To Know Each Other";
+     	aTitle[2]="Acquaint More About Each Other";
+     	aTitle[3]="Feel Liking Each Other";
+     	aTitle[4]="Better Understanding";
+     	aTitle[5]="Fall In Love";
+     	aTitle[6]="Emotion Become Heat";
+     	aTitle[7]="We Got Cooling Down";
+     	aTitle[8]="There Was A Break";
+     	aTitle[9]="Luckily We Recovered";
+     	aTitle[10]="You Got Worries";
+     	aTitle[11]="It Seems There Is Distance Between Us";
+     	aTitle[12]="Argues Happens Time And Time Again";
+     	aTitle[13]="Sadness For Both";
+     	aTitle[14]="You Hate Me";
+     	aTitle[15]="Your Heart Broken";
+     	aTitle[16]="End Up The Story";
+
+
+     	  	
+     	var oDiv1=document.getElementById('div1');
+     	var oH1=document.getElementById('h1');
+			var oP1=document.getElementById('p1');
+			var oP2=document.getElementById('p2');
+     	var aArr1=oDiv1.getElementsByTagName('li');
+     	for (i=0;i<aArr1.length+1;i++)
+     	{
+     		aArr1[i].index=i;
+     		aArr1[i].onclick=function(){
+     	oH1.innerHTML=aTitle[this.index];
+    	oP2.innerHTML=aContent[this.index];
+ 	
+     		}
+     	}
+     	
+     
+    oP1.onclick=function(){
+    	oH1.innerHTML="This Is Our Story";
+    	oP2.innerHTML="Welome! You will read our story here.";
+}
+}
+     </script>
+		<style>
+      a:link {color:#1E90FF;text-decoration:none;}
+      a:visited {color:#1E90FF;}
+      a:hover {color:#FF6347;}
+      a:active {color:#7CFC00;}
+      #div1 {margin:0px;padding-left:10px;background:#E0FFFF;width:20%;height:100%;float:left;border-right:2px solid gray; }
+      #div2 {margin:0px;padding-left:20px;float:left;}
+      body {margin:0px;padding:0px;}
+
+    </style>
+</head>
+<body>
+	
+	<div id="div1">
+		<p id="p1"><a href="javascript:" >Home</a></p>
+		<ul>
+      <li><a href="javascript:" >Met</a></li>
+      <li><a href="javascript:" >Know</a></li>
+      <li><a href="javascript:" >Acquaint</a></li>
+      <li><a href="javascript:" >Like</a></li>
+      <li><a href="javascript:" >Understand</a></li>
+      <li><a href="javascript:" >Love</a></li>
+      <li><a href="javascript:" >Heat</a></li>
+      <li><a href="javascript:" >Cooling</a></li>
+      <li><a href="javascript:" >Leave</a></li>
+      <li><a href="javascript:" >Recover</a></li>
+      <li><a href="javascript:" >Worries</a></li>
+      <li><a href="javascript:" >Distance</a></li>
+      <li><a href="javascript:" >Argues</a></li>
+      <li><a href="javascript:" >Sadness</a></li>
+      <li><a href="javascript:" >Hate</a></li>
+      <li><a href="javascript:" >Heart Broken</a></li>
+      <li><a href="javascript:" >End</a></li>
+    </ul>
+	</div>
+	<div id="div2">
+<h1 id="h1">This Is Our Story</h1>
+<p id="p2">Welome! You will read our story here. </p>
+	</div>
+
+</body>
+
+</html>
